@@ -31,8 +31,15 @@ struct PongMode : Mode {
 	glm::vec2 ball = glm::vec2(0.0f, 0.0f);
 	glm::vec2 ball_velocity = glm::vec2(-1.0f, 0.0f);
 
-	uint32_t left_score = 0;
+	glm::vec2 ball_2 = glm::vec2(1.0f, 1.0f);
+	glm::vec2 ball_2_velocity = glm::vec2(-1.0f, 0.0f);
+
+	std::vector<glm::vec2> balls;
+	std::vector<glm::vec2> ball_velocities;
+
+	uint32_t left_score = 20;
 	uint32_t right_score = 0;
+	int ball_num = 10;
 
 	float ai_offset = 0.0f;
 	float ai_offset_update = 0.0f;
@@ -41,7 +48,9 @@ struct PongMode : Mode {
 
 	float trail_length = 1.3f;
 	std::deque< glm::vec3 > ball_trail; //stores (x,y,age), oldest elements first
+	std::deque< glm::vec3 > ball_2_trail; //stores (x,y,age), oldest elements first
 
+	std::vector<std::deque< glm::vec3 >> ball_trails; //stores (x,y,age), oldest elements first
 	//----- opengl assets / helpers ------
 
 	//draw functions will work on vectors of vertices, defined as follows:
