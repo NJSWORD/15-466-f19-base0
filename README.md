@@ -1,4 +1,4 @@
-# (TODO: your game's title)
+# I'm not pong!
 
 Author: Jiechen Li, jiechenl
 
