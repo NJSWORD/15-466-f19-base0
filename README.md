@@ -2,7 +2,7 @@
 
 Author: Jiechen Li, jiechenl
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: 
 
 Compared with the prototype, this game remove the right paddle and add more balls. The target is to avoid balls, rather than hitting the balls.
 
